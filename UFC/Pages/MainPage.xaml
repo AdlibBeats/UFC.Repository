@@ -1,0 +1,35 @@
+﻿<Page x:Class="UFC.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:UFC.Pages"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+      d:DesignHeight="640" d:DesignWidth="380"
+	Title="MainPage">
+
+    <Grid Background="LightGreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center">Main Page</TextBlock>
+        <Button Grid.Column="1" Grid.Row="5" Content="Go to page 1" Click="NavigateTo_Page1"/>
+        <Button Grid.Column="1" Grid.Row="6" Content="Go to page 2" Click="NavigateTo_Page2"/>
+        <Button Grid.Column="1" Grid.Row="7" Content="Go back" Click="Button_GoBack" IsEnabled="{Binding IFloppyPages.CanGoBack, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Column="1" Grid.Row="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="Main page"/>
+    </Grid>
+</Page>
